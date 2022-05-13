@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "47e47af2-f2f2-4cc4-a3df-9d937fb3510d",
+		"name": "API-Collection-NAVYA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"status code is 200\",function()\r",
+							"{\r",
+							"    pm.response.to.have.status(200)\r",
+							"}\r",
+							");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "postrequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postv\": \"amith.k@reqres.in\",\r\n    \"postvv\": \"Amit\",\r\n    \"last_name\": \"K\",\r\n    \"avatar\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "putrequest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"amith.kumar@reqres.in\",\r\n    \"first_name\": \"Amith\",\r\n    \"last_name\": \"Kumar\",\r\n    \"avatar\": \"\",\r\n    \"id\": \"664\",\r\n    \"createdAt\": \"2022-02-15T15:18:16.933Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users?id=664",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "664"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

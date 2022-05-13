@@ -1,0 +1,38 @@
+#%RAML 1.0
+title: LAST-ASSIGNMENT
+description: I AM DOING THE ASSIGNMENT NOW
+mediaType:
+  - application/json
+version: v1
+protocols:
+  - HTTP
+types:
+  NewDataType:
+    type: object
+  Getdtatatype:
+    properties:
+      ALL-details:
+        items:
+          properties:
+            id:
+              example: "2345"
+              type: string
+            name:
+              example: navya
+              type: string
+            email:
+              example: navya@gmail.com
+              type: string
+            gender:
+              example: female
+              type: string
+            status:
+              example: inactive
+              type: string
+/milestone1:
+  get:
+    responses:
+      "200":
+        body:
+          type: Getdtatatype
+/new-resource/new-resource: {}
